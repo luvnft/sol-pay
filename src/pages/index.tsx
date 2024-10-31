@@ -11,7 +11,7 @@ dotenv.config();
 // Configure your RPC connection
 // const RPC="https://rpc.helius.xyz/?api-key=".process.env.HELIUS_RPC!
 
-const RPC="https://rpc.helius.xyz/?api-key=82d90b23-dc14-48a7-ac17-3c95ace2130b"!
+const RPC="https://mainnet.helius-rpc.com/?api-key=49753b6b-6d25-4d39-8ab0-eb78cf9febdb"!
 //const RPC = `https://rpc.helius.xyz/?api-key=${process.env.HELIUS_RPC}`;
 console.log(RPC); // This will output the complete RPC URL
 
@@ -23,12 +23,12 @@ export default function Home() {
   // URL Variables
   const [address, setAddress] = useState("");
   const [recipient, setRecipient] = useState(
-    new PublicKey("Ckg9D8BZmeze7Ka19fYJG3pyFGiAgiYSnQGToNbdRz8r"));
+    new PublicKey("9MkXqB55qNMrYN9EVcHNHCaAoEtZzvjjoFxjEypCwGJq"));
   const [amount, setAmount] = useState(new BigNumber(1));
-  const [message] = useState("Payxn Demo Order");
+  const [message] = useState("W3W.delivery Store");
   const reference = new Keypair().publicKey;
-  const label = "Payxn Super Store";
-  const memo = "Payxn#1337";
+  const label = "W3W.delivery Pay";
+  const memo = "Pay#1337";
 
   // for the QR code
   const [qrCodeValue, setQrCodeValue] = useState('');
@@ -99,7 +99,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <h1 className="mb-6 text-3xl font-bold text-indigo-700">
-        Payxn Solana Pay Demo
+        W3W.delivery Solana Pay
       </h1>
       <div className="w-full max-w-md p-6 mx-auto bg-white rounded-xl shadow-md">
         <div className="mb-4">
